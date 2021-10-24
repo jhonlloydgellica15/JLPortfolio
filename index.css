@@ -261,24 +261,16 @@ nav ul li a:hover {
   margin: 0.5rem 0.5rem;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 6px 5px -1px rgba(0, 0, 0, 0.25);
   transition: transform 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.box-icons .boxes:hover img {
+.box-icons .boxes:hover {
   transform: scale(1.4) translate(1px);
 }
 
-.box-icons img {
-  margin: 2rem;
-}
-
-.box-icons .jquery {
-  margin: 5rem 1rem;
-}
-.box-icons .mysql {
-  width: 120px;
-  margin: 2.3rem 0rem;
-}
 .about-btn {
   display: flex;
   flex-direction: column;
