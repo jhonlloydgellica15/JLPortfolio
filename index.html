@@ -16,53 +16,132 @@
     <title>My Portfolio</title>
   </head>
   <body>
-    <header>
-      <div class="top-bar">
-        <a><i class="fas fa-bars"></i></a>
-        <div class="logo"><a href="">DYOLL</a></div>
-        <div class="nav-container">
-          <nav id="nav">
-            <ul>
-              <li><a class="active" href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Resume</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Hire me</a></li>
+    <div class="container">
+      <section id="home">
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
+          <h2 class="logo">DYOLL</h2>
+        </div>
+        <nav class="main-navigation">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Resume</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Hire Me</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section id="intro">
+        <div class="intro-body">
+          <h5>HELLO, WORLD.</h5>
+          <h1>I'm Jhon Lloyd Gellica.</h1>
+          <p class="intro-position">
+            <span class="front">FRONT-END DEVELOPER</span>
+            <span>PROGRAMMER</span>
+          </p>
+          <a class="btn" href=""
+            >MORE ABOUT ME <i class="fas fa-angle-down"></i
+          ></a>
+        </div>
+        <div></div>
+        <div class="icons">
+          <ul class="intro-social">
+            <li>
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-github"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fas fa-envelope"></i></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <section id="about">
+      <div class="about-header">
+        <div class="about-me">
+          <h5>ABOUT</h5>
+          <h1>Let me introduce myself.</h1>
+        </div>
+        <div class="about-img">
+          <img src="./profile.WEBP" alt="My image" />
+          <p>
+            Welcome to my Simple Web Portfolio! Thank you for taking the time to
+            visit. This portfolio of mine was developed using my knowledge about
+            Web Development with the following Technologies: Html, Css,
+            JavaScript, and Photoshop. You can find out more about me and then
+            get in touch for a chat.
+          </p>
+        </div>
+
+        <div class="about-profile">
+          <div class="profile">
+            <h3>PROFILE</h3>
+            <p>
+              I'm a passionate Programmer, Designer, and learner born in the
+              city of Davao Philippines. In 2020, I completed my Bachelor Degree
+              'Bachelor of Science in Information Technology at Holy Cross of
+              Davao College. I'm a Dedicated, Hardworking, Detail Oriented, and
+              Passionate person.
+            </p>
+            <ul class="intro-list">
+              <li>
+                <strong>Fullname:</strong>
+                <span>Jhon Lloyd Gellica</span>
+              </li>
+              <li>
+                <strong>Birth Date:</strong>
+                <span>August 11, 1998</span>
+              </li>
+              <li>
+                <strong>JOB:</strong>
+                <span>Programmer, Freelancer, Frontend Developer</span>
+              </li>
+              <li>
+                <strong>WEBSITE:</strong>
+                <span>jhonlloydgellica@gmail.com</span>
+              </li>
+              <li>
+                <strong>EMAIL:</strong>
+                <span>jhonlloydgellica@gmail.com</span>
+              </li>
             </ul>
-          </nav>
+          </div>
+
+          <div class="skills">
+            <h3>SKILLS</h3>
+
+            <div class="box-icons">
+              <div class="box-1">
+                <img src="./Svg/html5.svg" alt="" />
+              </div>
+              <div class="box-1">
+                <img src="./Svg/css3.svg" alt="" />
+              </div>
+              <div class="box-1">
+                <img src="./Svg/javascript.svg" alt="" />
+              </div>
+              <div class="box-1">
+                <img src="./Svg/c-sharp.svg" alt="" />
+              </div>
+              <div class="box-1 js">
+                <img class="jquery" src="./Svg/jquery.svg" alt="" />
+              </div>
+
+              <div class="box-1">
+                <img class="mysql" src="./Svg/mysql.svg" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <section id="intro">
-        <h5>HELLO, WORLD.</h5>
-        <h1>I'm Jhon Lloyd Gellica</h1>
-        <div class="intro-social"></div>
-        <p class="intro-position">
-          <span>FRONT-END DEVELOPER</span>
-          <span>PROGRAMMER</span>
-        </p>
-        <a class="btn" href=""
-          >MORE ABOUT ME <i class="fas fa-angle-down"></i
-        ></a>
-        <ul class="intro-social">
-          <li>
-            <a href=""><i class="fab fa-linkedin-in"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fab fa-github"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fas fa-envelope"></i></i></a>
-          </li>
-        </ul>
-      </section>
-    </header>
-
-    <section id="about">
-      <h5>ABOUT</h5>
-      <h2>Let me introduce myself.</h2>
     </section>
 
     <script
@@ -71,6 +150,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="./app.js"></script>
+    <script src="./JS/vanilla-tilt.min.js"></script>
+    <script src="./JS/app.js"></script>
   </body>
 </html>

@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@300;400;600;700&display=swap");
 :root {
-  --color-primary: #990047;
-  --color-secondary: #1f1f1f;
+  --color-primary: #ff0077;
+  --color-secondary: #313131;
   --color-body: #ebebeb;
+  --color-paragraph: #6e6e6e;
 }
 *,
 *::before,
@@ -12,13 +13,25 @@
   box-sizing: border-box;
 }
 
+h5,
+h3 {
+  color: var(--color-primary);
+  letter-spacing: 2px;
+}
+P {
+  color: var(--color-paragraph);
+  font-family: "Lora", serif;
+}
 /* Components */
 .btn {
   border: 3px solid #5f5f5f;
-  padding: 1.5rem 1rem;
-  width: 200px;
+  padding: 1.5rem 2.5rem;
+  white-space: nowrap;
+  transition: border 0.5s ease-out;
 }
-/* Typography */
+.btn:hover {
+  border: 3px solid var(--color-primary);
+}
 html {
   font-size: 62.5%;
 }
@@ -28,183 +41,295 @@ body {
   color: var(--color-body);
 }
 
-h1 {
-  color: #fff;
-}
-h2 {
-  color: var(--color-secondary);
-  letter-spacing: 2px;
-  font-size: 2rem;
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 8%;
+  background-color: #111025;
 }
 
-@media screen and (min-width: 1024px) {
-  body {
-    font-size: 1.8rem;
-  }
+/* Home section */
+#home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-/* End of typography */
-
 /* Navbar */
 
-.top-bar {
-  display: flex;
-  padding: 1rem 2rem;
-  position: fixed;
-  width: 200px;
-  background: black;
-  margin-left: 2rem;
-}
-.top-bar .fa-bars {
-  color: var(--color-primary);
-  font-size: 2rem;
+.fa-bars {
+  width: 2.5rem;
   cursor: pointer;
+  padding: 1.5rem 0;
+  color: var(--color-primary);
 }
-.nav-container {
-  position: absolute;
+.logo {
+  margin: 1rem 2rem;
+  font-size: 2.3rem;
+  letter-spacing: 5px;
+}
+#home {
+  position: fixed;
+}
+.hamburger,
+nav {
+  display: flex;
   background: black;
   width: 200px;
-  color: black;
-  height: 280px;
-  left: 0;
-  margin-top: 3rem;
-  z-index: -1;
+  max-width: 100%;
+  padding-left: 2rem;
+}
+nav {
+  display: none;
+  height: 200px;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  transition: margin 0.5s;
+}
+nav ul li a:hover {
+  color: var(--color-primary);
+  margin-left: 10px;
 }
 
-nav {
-  position: absolute;
+/* */
+
+/* Intro*/
+#intro {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: space-between;
+  text-align: center;
+}
+.intro-body {
+  margin: auto;
+}
+.intro-body a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  color: white;
+  font-weight: 600;
+}
+
+.intro-body h1 {
   margin-top: 1rem;
+  line-height: 4rem;
 }
-nav ul {
-  list-style-type: none;
-  font-size: 1.5rem;
-  margin-top: 4rem;
-  font-weight: 500;
+.icons a {
+  color: white;
+  padding: 0 1.5rem;
+  font-size: 2.5rem;
+  transition: color 0.6s;
 }
-nav li {
-  margin-left: 2rem;
-  margin-top: 1rem;
-}
-nav li a {
-  transition: margin 0.15s;
-}
-nav li a:hover {
-  margin-left: 10px;
-  color: #990047;
-}
-nav li a.active {
+.icons a:hover {
   color: var(--color-primary);
 }
-.top-bar a {
+.icons ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+.intro-position {
+  margin: 2rem 0 4rem 0;
+  font-size: 1.3rem;
+  font-family: "Lora", serif;
+  letter-spacing: 3px;
+  line-height: 2.5rem;
   color: white;
-  text-decoration: none;
 }
-.top-bar .logo {
-  margin-left: 2rem;
-  font-weight: 600;
-  letter-spacing: 5px;
-  font-size: 2.5rem;
-}
-@media screen and (min-width: 576px) {
-  nav li a {
-    font-size: 1.5rem;
+
+@media screen and (min-width: 600px) {
+  .intro-position .front::before,
+  .intro-position span::after {
+    content: " | ";
+  }
+  .intro-body h1 {
+    font-size: 6.7rem;
+    line-height: 6rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .top-bar .fa-bars {
-    font-size: 3rem;
+  .intro-body h1 {
+    font-size: 7rem;
+    line-height: 6rem;
   }
-  .top-bar .logo {
-    font-size: 2rem;
+  .intro-body a {
+    margin-top: 2rem;
+    font-size: 1.5rem;
   }
-  nav li a {
-    font-size: 1.6rem;
+  .intro-position {
+    font-size: 1.5rem;
   }
-  .top-bar {
-    margin-left: 7rem;
-    padding-top: 2rem;
+  .icons a {
+    font-size: 3.2rem;
+    padding-top: 0 2rem;
   }
 }
-
 @media screen and (min-width: 992px) {
-  .top-bar {
-    margin-left: 10rem;
-  }
 }
-
 @media screen and (min-width: 1200px) {
-  .top-bar {
-    margin-left: 13rem;
-  }
 }
 
-@media screen and (min-width: 1400px) {
-  .top-bar {
-    margin-left: 20rem;
-  }
-}
+/* About me section */
 
-/* Intro Section */
-header {
-  min-height: 100vh;
-  background: #111025;
+#about {
+  padding: 11.2rem 5%;
+  background: #fff;
 }
-
-#intro {
+.about-me {
+  text-align: center;
+}
+.about-me h1 {
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+.about-me h5 {
+  font-size: 1.4rem;
+}
+.about-img {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 8rem;
+}
+.about-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 3rem 0;
+}
+.about-img p {
+  font-size: 1.6rem;
   text-align: center;
-  width: 60%;
-  margin: auto;
-}
-h1 {
-  text-shadow: 0 0 20px rgb(0 0 0 / 50%);
-  line-height: 4rem;
-}
-h5 {
-  color: var(--color-primary);
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-}
-.intro-position {
-  margin-top: 1rem;
-}
-.intro-position span {
-  font-family: "Lora", serif;
-  font-size: 1.2rem;
-  display: flex;
-  justify-content: center;
-  letter-spacing: 2px;
-  padding-top: 0.5rem;
-}
-.intro-social {
-  margin-top: 8rem;
-}
-#intro ul {
-  list-style-type: none;
-  display: flex;
-}
-#intro ul a {
-  padding: 0 1rem;
-  font-size: 2.5rem;
-}
-#intro ul a:hover {
-  color: var(--color-primary);
-}
-#intro a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  margin-top: 3rem;
-  letter-spacing: 2px;
-  font-weight: 600;
+  line-height: 1.8;
 }
 
-/* About section */
-#about {
-  width: 100%;
-  height: 500px;
+.profile p {
+  margin-left: 0 !important;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+.about-profile ul {
+  list-style: none;
+}
+.about-profile strong {
+  color: var(--color-secondary);
+  font-size: 1.4rem;
+}
+.about-profile span {
+  color: #888;
+  font-size: 1.4rem;
+}
+.about-profile h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 3rem 0;
+}
+
+.about-profile,
+.intro-list {
+  margin-top: 2rem;
+}
+.box-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.box-icons .box-1 {
+  width: 120px;
+  height: 120px;
+  margin: 0.5rem 0.5rem;
   background: #fff;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+  transition: scale 5s;
+}
+.box-icons .box-1:hover img {
+  transform: scale(1.4) translate(1px);
+}
+
+.box-icons img {
+  width: 80px;
+  margin: 2rem;
+}
+
+.box-icons .jquery {
+  width: 100px;
+  margin: 5rem 1rem;
+}
+.box-icons .mysql {
+  width: 120px;
+  margin: 2.3rem 0rem;
+}
+
+@media screen and (min-width: 600px) {
+  .about-me h1 {
+    font-size: 3.6rem;
+  }
+  .about-me h5 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .about-me {
+    text-align: center;
+  }
+  .about-img {
+    margin-top: 4rem;
+    flex-direction: row;
+  }
+
+  .about-img p,
+  .about-profile p {
+    text-align: left;
+    font-size: 1.9rem;
+    margin-left: 2rem;
+  }
+  .about-header {
+    max-width: 1000px;
+    margin: auto;
+  }
+  .profile,
+  .skills {
+    width: 100%;
+  }
+
+  .about-profile h3 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .box-icons {
+    margin: auto;
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 578px) and (max-width: 619px) {
+  .box-icons {
+    width: 99%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 809px) {
+  .about-profile {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1084px) {
+  .box-icons {
+    margin: auto;
+    width: 75%;
+  }
 }
