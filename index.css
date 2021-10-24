@@ -43,6 +43,7 @@ body {
 
 .container {
   width: 100%;
+
   min-height: 100vh;
   padding: 0 8%;
   background-color: #111025;
@@ -103,7 +104,7 @@ nav ul li a:hover {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  min-height: 90vh;
   justify-content: space-between;
   text-align: center;
 }
