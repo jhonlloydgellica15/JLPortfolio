@@ -268,12 +268,10 @@ nav ul li a:hover {
 }
 
 .box-icons img {
-  width: 80px;
   margin: 2rem;
 }
 
 .box-icons .jquery {
-  width: 100px;
   margin: 5rem 1rem;
 }
 .box-icons .mysql {
