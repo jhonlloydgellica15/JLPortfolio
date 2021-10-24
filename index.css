@@ -29,6 +29,7 @@ P {
   white-space: nowrap;
   transition: border 0.5s ease-out;
 }
+
 .btn:hover {
   border: 3px solid var(--color-primary);
 }
@@ -121,6 +122,9 @@ nav ul li a:hover {
 .intro-body h1 {
   margin-top: 1rem;
   line-height: 4rem;
+}
+.icons {
+  padding: 2rem 0;
 }
 .icons a {
   color: white;
@@ -221,12 +225,16 @@ nav ul li a:hover {
   font-size: 1.6rem;
   line-height: 1.8;
 }
+.about-profile {
+  margin-bottom: 8rem;
+}
 .about-profile ul {
   list-style: none;
 }
 .about-profile strong {
   color: var(--color-secondary);
   font-size: 1.4rem;
+  letter-spacing: 1px;
 }
 .about-profile span {
   color: #888;
@@ -247,18 +255,16 @@ nav ul li a:hover {
   justify-content: center;
   flex-wrap: wrap;
 }
-.box-icons .box-1 {
+.box-icons .boxes {
   width: 120px;
   height: 120px;
   margin: 0.5rem 0.5rem;
   background: #fff;
   border-radius: 10px;
-  transform-style: preserve-3d;
-  perspective: 500px;
   box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
-  transition: scale 5s;
+  transition: transform 0.4s;
 }
-.box-icons .box-1:hover img {
+.box-icons .boxes:hover img {
   transform: scale(1.4) translate(1px);
 }
 
@@ -275,8 +281,47 @@ nav ul li a:hover {
   width: 120px;
   margin: 2.3rem 0rem;
 }
-
+.about-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-btn a {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+.btns {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1rem 4rem;
+  border: 0;
+  text-align: center;
+  white-space: nowrap;
+  margin: 1rem auto;
+  cursor: pointer;
+}
+.btn--outline {
+  border: 3px solid var(--color-secondary);
+  color: var(--color-secondary);
+  transition: border 0.5s ease-out;
+}
+.btn--outline:hover {
+  border: 3px solid var(--color-primary);
+}
+.btn--secondary {
+  background: var(--color-secondary);
+  color: white;
+}
+.btns--block {
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+}
 @media screen and (min-width: 600px) {
+  .about-profile strong {
+    font-size: 1.6rem;
+  }
   .about-me h1 {
     font-size: 3.6rem;
   }
@@ -325,6 +370,16 @@ nav ul li a:hover {
 @media screen and (min-width: 809px) {
   .about-profile {
     display: flex;
+  }
+  .about-btn {
+    text-align: center;
+    flex-direction: row;
+    width: 70%;
+    margin: auto;
+  }
+  .btns {
+    margin-right: 2rem;
+    padding: 1.5rem 4rem;
   }
 }
 @media screen and (min-width: 1084px) {
