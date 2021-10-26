@@ -685,7 +685,7 @@ h5 {
 }
 @media screen and (min-width: 772px) {
   #footer {
-    padding-bottom: 0;
+    padding-bottom: 2rem;
   }
   .container-2 {
     max-width: 650px;
