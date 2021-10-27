@@ -4,7 +4,6 @@ $(document).ready(() => {
   });
 
   const toTop = $(".to-top");
-  console.log(toTop);
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > 100) toTop.addClass("active");
     else toTop.removeClass("active");
@@ -28,7 +27,37 @@ $(document).ready(() => {
   };
 
   //Prevents reload
-  $("nav li a").click(function (event) {
+  $("nav ul li a").click(function (event) {
+    event.preventDefault();
+    $("body,html").animate(
+      {
+        scrollTop: $($(this).attr("href")).offset().top,
+      },
+      1
+    );
+  });
+
+  $(".more").click(function (event) {
+    event.preventDefault();
+    $("body,html").animate(
+      {
+        scrollTop: $($(this).attr("href")).offset().top,
+      },
+      1
+    );
+  });
+
+  $(".top").click(function (event) {
+    event.preventDefault();
+    $("body,html").animate(
+      {
+        scrollTop: 0,
+      },
+      1
+    );
+  });
+
+  $(".hire-me").click(function (event) {
     event.preventDefault();
     $("body,html").animate(
       {
