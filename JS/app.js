@@ -26,4 +26,15 @@ $(document).ready(() => {
       }
     }
   };
+
+  //Prevents reload
+  $("nav li a").click(function (event) {
+    event.preventDefault();
+    $("body,html").animate(
+      {
+        scrollTop: $($(this).attr("href")).offset().top,
+      },
+      1
+    );
+  });
 });
