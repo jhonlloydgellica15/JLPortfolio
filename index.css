@@ -770,33 +770,45 @@ h5 {
 }
 
 #splash-logo path:nth-child(1) {
-  stroke-dasharray: 553;
-  stroke-dashoffset: 553;
+  stroke-dasharray: 518;
+  stroke-dashoffset: 518;
   animation: line-anim 2s ease forwards;
 }
 #splash-logo path:nth-child(2) {
-  stroke-dasharray: 377;
-  stroke-dashoffset: 377;
+  stroke-dasharray: 392;
+  stroke-dashoffset: 392;
   animation: line-anim 2s ease forwards 0.12s;
 }
 #splash-logo path:nth-child(3) {
-  stroke-dasharray: 549;
-  stroke-dashoffset: 549;
+  stroke-dasharray: 506;
+  stroke-dashoffset: 506;
   animation: line-anim 2s ease forwards 0.6s;
 }
 #splash-logo path:nth-child(4) {
-  stroke-dasharray: 300.67;
-  stroke-dashoffset: 300.67;
+  stroke-dasharray: 315;
+  stroke-dashoffset: 315;
   animation: line-anim 2s ease forwards 0.9s;
 }
 #splash-logo path:nth-child(5) {
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
+  stroke-dasharray: 315;
+  stroke-dashoffset: 315;
   animation: line-anim 2s ease forwards 0.12s;
 }
 
 @keyframes line-anim {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #splash-logo {
+    width: 150px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1020px) {
+  #splash-logo {
+    width: 300px;
   }
 }

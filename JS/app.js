@@ -1,6 +1,6 @@
 $(document).ready(() => {
   $(window).on("load", function () {
-    $(".splash").delay(2500).fadeOut("fast");
+    $(".splash").delay(2000).fadeOut("fast");
   });
 
   $(".fa-bars").click(() => {
