@@ -1,4 +1,8 @@
 $(document).ready(() => {
+  $(window).on("load", function () {
+    $(".splash").delay(2500).fadeOut("fast");
+  });
+
   $(".fa-bars").click(() => {
     $(".main-navigation").slideToggle();
   });
