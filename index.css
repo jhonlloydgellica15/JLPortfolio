@@ -277,6 +277,7 @@ nav ul li a:hover {
 .about-btn a {
   font-size: 1.5rem;
   letter-spacing: 2px;
+  text-decoration: none;
 }
 .btns {
   border: 0;
