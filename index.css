@@ -758,7 +758,7 @@ h5 {
 }
 
 /* loader */
-/* .splash {
+.splash {
   position: fixed;
   top: 0;
   left: 0;
@@ -814,4 +814,4 @@ h5 {
   #splash-logo {
     width: 300px;
   }
-} */
+}
