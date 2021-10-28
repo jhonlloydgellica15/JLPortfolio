@@ -1,6 +1,0 @@
-{
-  "devDependencies": {
-    "cssnano": "^4.1.11",
-    "parcel": "^2.0.0"
-  }
-}
