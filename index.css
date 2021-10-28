@@ -104,7 +104,7 @@ nav ul li a:hover {
 /* */
 
 /* Intro*/
-#intro {
+#Intro {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -184,7 +184,7 @@ nav ul li a:hover {
 
 /* About me section */
 
-#about {
+#About {
   background: #fff;
   padding: 11.2rem 5%;
 }
@@ -238,7 +238,7 @@ nav ul li a:hover {
   color: #888;
   font-size: 1.4rem;
 }
-#about h3 {
+#About h3 {
   color: var(--color-secondary);
   font-size: 2rem;
   margin: 3rem 0;
@@ -375,23 +375,26 @@ nav ul li a:hover {
 }
 
 /* Resume */
-#resume {
+#Resume {
   background: var(--color-body);
   min-height: 100vh;
   padding: 11.2rem 5%;
 }
 
-#resume h1 {
+#Resume h1 {
   color: var(--color-secondary);
   font-size: 4rem;
   font-weight: 600;
   font-weight: 600;
 }
-#resume h5 {
+#Resume h5 {
   font-size: 1.4rem;
 }
 .resume-header {
   text-align: center;
+}
+.timeline-item h5 {
+  text-align: left;
 }
 .timeline-items {
   display: flex;
@@ -475,7 +478,7 @@ nav ul li a:hover {
   }
 }
 @media screen and (max-width: 730px) {
-  #resume h1 {
+  #Resume h1 {
     font-size: 2.6rem;
   }
   .timeline-items::before {
@@ -497,7 +500,7 @@ nav ul li a:hover {
   }
 }
 @media screen and (max-width: 1022px) {
-  #resume h1 {
+  #Resume h1 {
     font-size: 2.6rem;
   }
   .timeline-content h3 {
@@ -511,7 +514,7 @@ nav ul li a:hover {
 }
 
 /* Portfolio */
-#portfolio {
+#Portfolio {
   min-height: 100vh;
   padding: 11.2rem 5%;
 }
@@ -621,20 +624,20 @@ h5 {
 }
 
 /* Footer */
-#footer {
+#Footer {
   background: #151515;
   min-height: 60vh;
   padding: 11.2rem 5% 3rem 5%;
 }
-#footer h1 {
+#Footer h1 {
   color: white;
   margin-top: 1rem;
 }
-#footer p {
+#Footer p {
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
 }
-#footer h5 {
+#Footer h5 {
   margin: 0;
 }
 .container-3 {
@@ -676,7 +679,7 @@ h5 {
   font-size: 2rem;
 }
 @media screen and (min-width: 772px) {
-  #footer {
+  #Footer {
     padding-bottom: 2rem;
   }
   .container-2 {
@@ -685,10 +688,10 @@ h5 {
     margin: 0 auto;
     max-width: 650px;
   }
-  #footer h5 {
+  #Footer h5 {
     font-size: 1.3rem;
   }
-  #footer p {
+  #Footer p {
     font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
   }
@@ -707,7 +710,7 @@ h5 {
   .container-3 i {
     font-size: 2.8rem;
   }
-  #footer h5 {
+  #Footer h5 {
     margin: 1.5rem;
   }
   .container-2 {
@@ -722,7 +725,7 @@ h5 {
   .container-3 i {
     font-size: 3rem;
   }
-  #footer h5 {
+  #Footer h5 {
     margin: 1.5rem;
   }
 }
@@ -755,7 +758,7 @@ h5 {
 }
 
 /* loader */
-.splash {
+/* .splash {
   position: fixed;
   top: 0;
   left: 0;
@@ -811,4 +814,4 @@ h5 {
   #splash-logo {
     width: 300px;
   }
-}
+} */
