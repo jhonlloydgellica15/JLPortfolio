@@ -41,7 +41,7 @@ jQuery(() => {
     );
   });
 
-  $(".btn .more").click(function (event) {
+  $(".btn.more").click(function (event) {
     event.preventDefault();
     $("body,html").animate(
       {
