@@ -1,4 +1,4 @@
-$(document).ready(() => {
+jQuery(() => {
   $(window).on("load", function () {
     $(".splash").delay(2000).fadeOut("fast");
   });
