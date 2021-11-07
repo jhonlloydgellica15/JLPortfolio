@@ -4,6 +4,15 @@
   --color-primary: #ff0077;
   --color-secondary: #313131;
 }
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  color: var(--color-body);
+  font-family: "Poppins", sans-serif;
+  font-size: 2.4rem;
+}
 *,
 *::before,
 *::after {
@@ -31,15 +40,6 @@ P {
 
 .btn:hover {
   border: 3px solid var(--color-primary);
-}
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-body {
-  color: var(--color-body);
-  font-family: "Poppins", sans-serif;
-  font-size: 2.4rem;
 }
 
 .container {
@@ -541,6 +541,8 @@ h5 {
   margin: 0.5rem 0.5rem;
   position: relative;
   width: 500px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
 }
 .proj-box img {
   border-radius: 5px;
@@ -549,6 +551,23 @@ h5 {
   width: 100%;
 }
 
+.proj-btn {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.proj-btn a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-size: 1.3rem;
+  transition: all 0.35s;
+  letter-spacing: 1px;
+}
+.proj-btn a:hover {
+  background: var(--color-primary);
+  color: white;
+}
 .img-overlay {
   background: rgba(0, 0, 0, 0.815);
   color: white;
