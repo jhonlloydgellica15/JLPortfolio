@@ -1,7 +1,5 @@
 $(() => {
-  $(window).on("load", function () {
-    $(".splash").delay(2000).fadeOut("fast");
-  });
+  $(".splash").delay(2500).fadeOut("fast");
 
   $(".fa-bars").click(() => {
     $(".main-navigation").slideToggle();
@@ -31,8 +29,8 @@ $(() => {
   };
 
   //Prevents reload
-  $("nav ul li a").click(function (event) {
-    event.preventDefault();
+  $("nav ul li a").click((e) => {
+    e.preventDefault();
     $("body,html").animate(
       {
         scrollTop: $($(this).attr("href")).offset().top,
@@ -41,8 +39,8 @@ $(() => {
     );
   });
 
-  $(".btn.more").click(function (event) {
-    event.preventDefault();
+  $(".btn.more").click((e) => {
+    e.preventDefault();
     $("body,html").animate(
       {
         scrollTop: $($(this).attr("href")).offset().top,
@@ -51,8 +49,8 @@ $(() => {
     );
   });
 
-  $(".top").click(function (event) {
-    event.preventDefault();
+  $(".top").click((e) => {
+    e.preventDefault();
     $("body,html").animate(
       {
         scrollTop: 0,
@@ -61,8 +59,8 @@ $(() => {
     );
   });
 
-  $(".hire-me").click(function (event) {
-    event.preventDefault();
+  $(".hire-me").click((e) => {
+    e.preventDefault();
     $("body,html").animate(
       {
         scrollTop: $($(this).attr("href")).offset().top,
