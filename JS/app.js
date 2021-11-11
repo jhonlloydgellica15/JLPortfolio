@@ -1,4 +1,4 @@
-$(() => {
+$(document).ready(() => {
   $(".splash").delay(2500).fadeOut("fast");
 
   $(".fa-bars").click(() => {
@@ -28,44 +28,23 @@ $(() => {
     }
   };
 
-  //Prevents reload
-  $("nav ul li a").click((e) => {
-    e.preventDefault();
-    $("body,html").animate(
-      {
-        scrollTop: $($(this).attr("href")).offset().top,
-      },
-      1
-    );
-  });
+  class Navigate {
+    static navigateElement(destination) {
+      $(`${destination}`).click(function (e) {
+        e.preventDefault();
+        $("body,html").animate(
+          {
+            scrollTop: $($(this).attr("href")).offset().top,
+          },
+          1
+        );
+      });
+    }
+  }
 
-  $(".btn.more").click((e) => {
-    e.preventDefault();
-    $("body,html").animate(
-      {
-        scrollTop: $($(this).attr("href")).offset().top,
-      },
-      1
-    );
-  });
-
-  $(".top").click((e) => {
-    e.preventDefault();
-    $("body,html").animate(
-      {
-        scrollTop: 0,
-      },
-      1
-    );
-  });
-
-  $(".hire-me").click((e) => {
-    e.preventDefault();
-    $("body,html").animate(
-      {
-        scrollTop: $($(this).attr("href")).offset().top,
-      },
-      1
-    );
-  });
+  //Navigate all href buttons
+  Navigate.navigateElement(".btn.more");
+  Navigate.navigateElement(".hire-me");
+  Navigate.navigateElement("nav ul li a");
+  Navigate.navigateElement(".top");
 });
